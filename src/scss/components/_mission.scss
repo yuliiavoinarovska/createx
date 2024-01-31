@@ -1,0 +1,87 @@
+.mission {
+	// min-height: 750px;
+	padding: 120px 0 0 0;
+
+	&__list {
+		--mission-gap: 97px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 28px;
+		gap: calc(var(--mission-gap) * 2);
+	}
+
+
+	&__item {
+		position: relative;
+		padding-top: 72px;
+		text-align: center;
+		background-position: top center;
+		background-size: 48px 48px;
+		background-repeat: no-repeat;
+
+		// разделитель
+		&:not(:last-child) {
+			&::after {
+				content: "";
+				position: absolute;
+				right: calc(-1 * var(--mission-gap));
+				top: 0;
+				width: 1px;
+				height: 100%;
+				background-image: url("../img/mission/divider.svg");
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&--quality {
+			background-image: url("../img/mission/quality.svg");
+		}
+
+		&--safety {
+			background-image: url("../img/mission/safety.svg");
+		}
+
+		&--comfort {
+			background-image: url("../img/mission/comfort.svg");
+		}
+	}
+
+	.title--h5 {
+		margin-bottom: 8px;
+	}
+
+	&__descr {
+		text-align: center;
+	}
+}
+
+.know-form {
+	@include bg-small-shadow;
+	position: relative;
+	top: 92px;
+	padding: 48px 60px;
+
+
+	&__title {
+		margin-bottom: 32px;
+		text-align: center;
+	}
+
+	&__field {
+		margin-right: 24px;
+	}
+	&__content {
+			display: flex;
+			align-items: end;
+
+	}
+
+	&__btn {
+		padding: 0 32px;
+		line-height: 44px;
+	}
+
+
+}

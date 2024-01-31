@@ -1,0 +1,30 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "./components/heading";
+
+//  компоненты страницы
+@import "./components/slider-nav";
+// подключения компонентов страницы (большие компоненты)
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about-section";
+@import "./components/mission";
+@import "./components/services-section";
+@import "./components/portfolio-section";
+@import "./components/partners";
+@import "./components/testimonials";
+@import "./components/facts";
+@import "./components/recent-news";
+@import "./components/contacts-section";
+@import "./components/footer";
+
+// подключения компонентов страницы (маленькие компоненты)
+@import "./components/nav";
+@import "./components/header-contacts";
+@import "./components/form-field";
+
+@import "./components/learn-more";
+

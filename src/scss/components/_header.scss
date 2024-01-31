@@ -1,0 +1,17 @@
+.header {
+	padding: 22px 0;
+
+	&__container {
+		@include flex-all-sb;
+	}
+
+	&__nav {
+		margin-left: -100px;
+	}
+
+	&--main {
+		color: var(--white);
+}
+
+
+}

@@ -1,0 +1,8 @@
+.learn-more {
+	@include flex-all-center;
+
+	&__subtitle {
+		margin-bottom: 0;
+		margin-right: 40px;
+	}
+}

@@ -1,0 +1,82 @@
+.testimonials {
+
+	padding-top: 70px;
+	background-color: var(--gray-200);
+	// min-height: 590px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content {
+		max-width: 600px;
+	}
+
+
+	&__title {
+		margin-bottom: 30px;
+
+	}
+
+	&__items {
+		position: relative;
+	}
+
+	&__slider-nav {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		// transform: translateX(12px);
+
+	}
+
+	&__image {
+		margin-bottom: -60px;
+	}
+}
+
+.testimonials-item {
+	padding-right: 12px; // чтобы ховер кнопок не обрезало
+	padding-bottom: 12px;
+	&__image {
+		width: 72px;
+		height: 72px;
+		margin-bottom: 24px;
+		border-radius: 100%;
+		overflow: hidden;
+
+		img {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+	&__text {
+		margin-bottom: 24px;
+	}
+
+	&__author {
+		display: block;
+		margin-bottom: 4px;
+		padding-right: 120px;
+		color: var(--gray-900);
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 160%;
+	}
+
+	&__author-position {
+		display: block;
+		padding-right: 120px;
+		color: var(--gray-700);
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%;
+
+	}
+
+}

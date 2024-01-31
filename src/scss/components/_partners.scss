@@ -1,0 +1,31 @@
+.partners {
+	padding: 80px 0 70px 0;
+	background-color: var(--gray-200);
+
+
+	&__title {
+		margin-bottom: 60px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 102px;
+		// margin-bottom: 140px;
+		// display: flex;
+		// justify-content: space-between;
+	}
+
+	// &__link {
+
+	// }
+
+	&__logo {
+		-webkit-filter: grayscale(1);// filter не сработало по непонятной причине
+	}
+	:hover {
+		-webkit-filter: grayscale(0);
+	}
+
+}
+

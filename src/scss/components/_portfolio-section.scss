@@ -1,0 +1,80 @@
+.portfolio-section {
+	padding: 90px 0 125px 0;
+
+	&__container {
+		padding: 0;
+		// overflow: visible;
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 30px;
+	}
+
+	&__slider-nav {
+		transform: translateX(12px);
+	}
+
+	&__title {
+		width: 705px;
+	}
+}
+
+.potfolio-section__items {
+	display: flex;
+	height: auto;
+	margin: 0;
+	margin-bottom: -20px; //дает нужный отступ к следующему елементу
+	padding: 0 15px 100px 15px; //решает проблему обрезки теней
+}
+
+.swiper-wrapper {
+	box-sizing: border-box;
+}
+
+.portfolio-item {
+	@include flex-column-center;
+	overflow: hidden;
+	@include bg-small-shadow;
+	&__image {
+		width: 100%;
+		max-height: 345px;
+		object-fit: cover;
+	}
+
+	&__content {
+		@include flex-column-center;
+		padding: 16px 20px 24px 20px;
+		// min-height: 94px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 4px;
+		color: var(--gray-900);
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 150%; /* 30px */
+	}
+
+	&__subtitle{
+		margin: 0;
+		color: var(--gray-700);
+		text-align: center;
+		font-family: Lato;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%; /* 21px */
+	}
+
+	&__btn {
+		display: none; // временно
+		margin-top: 24px;
+		color: var(--primary);
+		line-height: 44px; /* 314.286% */
+		padding: 0 32px;
+	}
+}
+

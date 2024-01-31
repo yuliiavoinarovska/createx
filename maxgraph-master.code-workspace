@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"AllAutocomplete.showCurrentDocument": false,
+		"liveServer.settings.multiRootWorkspaceName": "project3_Uber"
+	}
+}
