@@ -1,0 +1,28 @@
+.page-hero {
+	padding: 130px 0 180px 0;
+	min-height: 600px;
+	background-color: var(--gray-200);
+
+
+	&__breadcrumbs {
+		margin-bottom: 40px;
+	}
+
+	&__content {
+		max-width: 600px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&--services {
+		background: url("../../img/services/background.png") center center / cover no-repeat;
+	}
+
+	&--services-detail {
+		background: url("../../img/services/background.png") center center / cover no-repeat;
+	}
+}
+
+

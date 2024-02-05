@@ -1,0 +1,38 @@
+.btn-primary {
+	padding: 0 40px;
+	text-align: center;
+	font-family: "GothamPro";
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 52px;
+	text-transform: uppercase;
+	color: var(--white);
+	background: var(--primary);
+	border-radius: 4px;
+	&--md {
+		line-height: 44px;
+	}
+
+}
+
+.btn-stroke {
+	padding: 0 40px;
+	text-align: center;
+	font-family: "GothamPro";
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 50px;
+	text-transform: uppercase;
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	border-radius: 4px;
+	background: var(--white);
+	&--white {
+		color: var(--white);
+		border-color: var(--white);
+
+	}
+	&--md {
+		line-height: 44px;
+	}
+}

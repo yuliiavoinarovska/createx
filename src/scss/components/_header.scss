@@ -11,7 +11,14 @@
 
 	&--main {
 		color: var(--white);
-}
+	}
+
+	&--secondary {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
 
 
 }

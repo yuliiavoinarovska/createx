@@ -6,13 +6,13 @@
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		// grid-template-rows: repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
 		row-gap: 50px;
 		column-gap: 30px;
 	}
 
 	&__left {
-		grid-column: 7 span;
+		grid-column: 1 / 7;
 	}
 
 	&__logo {
@@ -33,15 +33,16 @@
 	}
 
 	&__form {
-		grid-column: 5 span;
+		grid-column: 8 / 12;
 	}
 
 	&__adress {
-		grid-column: 4 span;
+		grid-column: 1 / 5;
+
 	}
 
 	&__nav {
-		grid-column: 8 span;
+		grid-column: 7 span;
 	}
 
 
@@ -123,10 +124,7 @@
 }
 
 .footer-adress {
-	// font-style: normal;
-	// &__adress {
 
-	// }
 	&__item {
 		display: block;
 		margin: 0;
@@ -143,7 +141,6 @@
 	}
 
 	&__name {
-		display: block;
 		color: var(--white);
 
 
@@ -152,10 +149,11 @@
 
 .footer-nav {
 	display: flex;
+	margin-left: 54px;
 
 	&__col{
 		&:not(:last-child){
-			margin-right: 127px;
+			margin-right: 134px;
 		}
 	}
 
@@ -169,6 +167,6 @@
 		color: inherit;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 160%; /* 25.6px */
+		line-height: 160%;
 	}
 }
