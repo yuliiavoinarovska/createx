@@ -59,6 +59,7 @@
     "graph-modal": "^1.0.6",
     "graph-tabs": "^1.0.2",
     "inputmask": "^5.0.8",
+    "jslint": "^0.12.1",
     "just-validate": "^3.10.0",
     "rellax": "^1.12.1",
     "simplebar": "^5.3.9",

@@ -4,6 +4,9 @@
 @import "fonts";
 @import "settings";
 @import "./components/heading";
+@import "./components/breadcrumbs";
+@import "./components/btn";
+@import "./components/form-field";
 
 //  компоненты страницы
 @import "./components/slider-nav";
@@ -21,14 +24,17 @@
 @import "./components/contacts-section";
 @import "./components/footer";
 
-@import "./components/hero-services";
+@import "./components/page-hero";
 @import "./components/services-content";
+@import "./components/offer";
+@import "./components/stages";
+@import "./components/benefits";
+@import "./components/projects";
 
 
 // подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
 @import "./components/header-contacts";
-@import "./components/form-field";
 @import "./components/learn-more";
-@import "./components/breadcrumbs";
-@import "./components/btn";
+@import "./components/portfolio-item";
+

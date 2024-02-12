@@ -1,0 +1,96 @@
+.offer {
+	padding: 120px 0 180px 0;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__image {
+		width: 705px;
+		height: 440px;
+		border-radius: 4px;
+	}
+
+
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 420px;
+
+	&__title {
+		margin-bottom: 63px;
+	}
+}
+
+.accordion {
+	margin-bottom: 24px;
+
+	&__title {
+		padding-left: 44px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+
+
+	&__content {
+		overflow: hidden;
+		padding-left: 44px;
+		box-sizing: content-box;
+		max-height: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: max-height 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
+	}
+
+	span {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		width: 24px;
+		height: 24px;
+
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			border-radius: 2px;
+			top: 50%;
+			left: 0;
+			background: var(--primary);
+			transition: all 0.5s ease-out;
+		}
+
+		&::before {
+			transform: translateY(-50%);
+		}
+
+		&::after {
+			transform: translateY(-50%) rotate(90deg);
+
+		}
+	}
+}
+
+.accordion__content.active {
+	visibility: visible;
+	opacity: 1;
+	transition: max-height 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
+}
+
+
+.accordion__title.active span {
+
+	&::after{
+		transform: translateY(-50%) rotate(0);
+	}
+
+	&:before {
+		transform: translatey(-50%) rotate(-90deg);
+		opacity: 0;
+	}
+}
