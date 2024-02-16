@@ -5,6 +5,5 @@ import './_components';
 import './_sliders';
 import './_progress';
 import './_accordeon';
-
-
+import './_portfolio-tabs';
 

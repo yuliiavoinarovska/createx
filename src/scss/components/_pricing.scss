@@ -1,0 +1,97 @@
+.pricing {
+	position: relative;
+	padding: 80px 0 120px 0;
+	background: var(--gray-200);
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: -250px;
+	}
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.table-wrapper {
+	@include bg-small-shadow;
+	border: 1px solid var(--gray-300);
+	position: relative;
+	z-index: 1;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+
+	&__row {
+		height: 58px;
+	}
+
+	&__col {
+		text-align: center;
+
+		&:first-child {
+			padding: 0 24px;
+			text-align: left;
+		}
+	}
+
+	&__th {
+		padding: 32px 24px 24px 24px;
+
+		&:first-child {
+			text-align: left;
+			color: var(--gray-900);
+			font-family: "GothamPro";
+			font-size: 18px;
+			font-weight: 700;
+			vertical-align: bottom;
+
+		}
+	}
+
+	&__heading {
+		margin-bottom: 2px;
+		color: var(--gray-900);
+		font-family: "GothamPro";
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 150%;
+		text-transform: uppercase;
+	}
+
+	&__subheading {
+		color: var(--gray-700);
+		font-family: "GothamPro";
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 150%;
+	}
+
+	&__body {
+		.table__row {
+			&:nth-child(odd){
+				background-color: var(--gray-200);
+			}
+
+			&:last-child {
+				height: 100px;
+			}
+		}
+	}
+
+	&__check {
+		font-size: 0;
+		display: inline-block;
+		vertical-align: middle;
+		width: 24px;
+		height: 24px;
+		background: url(../img/mark.svg) center (center / cover) no-repeat;
+	}
+}
+
+
+
+

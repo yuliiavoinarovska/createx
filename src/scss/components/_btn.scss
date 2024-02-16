@@ -12,7 +12,6 @@
 	&--md {
 		line-height: 44px;
 	}
-
 }
 
 .btn-stroke {
@@ -29,9 +28,12 @@
 	&--white {
 		color: var(--white);
 		border-color: var(--white);
-
 	}
 	&--md {
 		line-height: 44px;
+	}
+	&--sm {
+		padding: 0 24px;
+		line-height: 36px;
 	}
 }

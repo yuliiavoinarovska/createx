@@ -11,7 +11,7 @@
 	&__form {
 		@include bg-large-shadow;
 		width: 495px;
-		height: 666px;
+		min-height: 666px;
 		padding: 27px 40px 48px 40px;
     }
 }

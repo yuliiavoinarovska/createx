@@ -1,0 +1,85 @@
+.portfolio {
+	padding-bottom: 100px;
+	margin-top: -60px;
+}
+
+.portfolio-tabs-nav {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 20px;
+	margin-bottom: 60px;
+
+	&__btn {
+		@include flex-column-center;
+		@include bg-small-shadow;
+		width: 230px;
+		min-height: 154px;
+		padding: 32px 16px;
+		transition: 0.5s ease-in-out;
+
+		&--active {
+			background: var(--primary);
+			pointer-events: none;
+
+			.portfolio-tabs-nav__icon {
+				fill: var(--white);
+			}
+
+			.portfolio-tabs-nav__text {
+				color: var(--white);
+			}
+		}
+	}
+
+	&__icon {
+		display: block;
+		width: 48px;
+		height: 48px;
+		margin-bottom: 16px;
+		fill: var(--primary);
+		transition: fill 0.5s ease-in-out;
+		pointer-events: none;
+	}
+
+	&__text {
+		margin: 0;
+		color: var(--gray-600);
+		font-family: "GothamPro";
+		font-size: 16px;
+		font-weight: 900;
+		text-align: center;
+		transition: color 0.5s ease-in-out;
+		pointer-events: none;
+	}
+}
+
+.portfolio-tabs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	margin-bottom: 60px;
+
+	&__item {
+
+		&--visible {
+			display: block;
+		}
+	}
+}
+.portfolio-btn {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 30px;
+	color: var(--gray-800);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 44px;
+
+	svg {
+		width: 24px;
+		height: 24px;
+		fill: var(--gray-800);
+		margin-right: 16px;
+	}
+}

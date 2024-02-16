@@ -1,14 +1,18 @@
 .portfolio-item {
+	width: 390px;
+	min-height: 440px;
 	overflow: hidden;
-	// @include flex-column-center;
 	display: flex;
 	flex-direction: column;
 	@include bg-small-shadow;
+
 	&__image {
-		width: 390;
+		width: 390px;
 		height: 345px;
+		border-radius: 4px 4px 0 0;
 		object-fit: cover;
-		transition: 0.5s ease-out;
+		transition: all 0.5s ease-out;
+		transition-delay: 0.2s;
 	}
 
 	&__content {
@@ -22,11 +26,10 @@
 
 	&__btn {
 		margin-top: 24px;
-		margin-bottom: -70px;
+		margin-bottom: -72px;
 		padding: 0 32px;
-		transition: 0.5s ease-out;
-		will-change: margin;
-
+		transition: margin 0.5s ease-out;
+		transition-delay: 0.2s;
 	}
 
 	&:hover {
@@ -36,7 +39,6 @@
 
 		.portfolio-item__image {
 			height: 277px;
-
 		}
 	}
 }
