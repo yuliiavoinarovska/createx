@@ -37,8 +37,22 @@
 		border-radius: 100%;
 		width: 80px;
 		height: 80px;
-		background-color: var(--primary);
+		background: var(--primary);
 		transform: translate(-50%, -50%);
+		transition: background 0.3s ease-in;
+
+		&:focus {
+			outline: 2px solid var(--primary);
+			outline-offset: 2px;
+		}
+
+		&:hover {
+			background: var(--hover);
+		}
+
+		&:active {
+			background: var(--active);
+		}
 
 		svg {
 			fill: var(--white);
@@ -56,7 +70,8 @@
 		border-radius: 100%;
 		width: 40px;
 		height: 40px;
-		background-color: rgba( #fff, 0.12);
+		background: rgba( #fff, 0.12);
+		transition: background 0.3s ease-in;
 
 		svg {
 			fill: var(--white);
@@ -64,5 +79,17 @@
 			height: 20px;
 		}
 
+		&:focus {
+			outline: 2px solid var(--primary);
+			outline-offset: 2px;
+		}
+
+		&:hover {
+			background: rgba( #fff, 0.4);
+		}
+
+		&:active {
+			background: rgba( #fff, 0.4);
+		}
 	}
 }

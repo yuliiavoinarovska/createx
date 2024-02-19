@@ -21,6 +21,21 @@
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 150%;
+		transition: color 0.2s ease;
+
+		&:focus {
+			outline: 2px solid var(--primary);
+			outline-offset: 2px;
+		}
+
+		&:hover {
+			color: var(--hover);
+		}
+
+		&:active {
+			color: var(--active);
+		}
+
 		&:not([href]) {
 			color: var(--gray-600);
 		}

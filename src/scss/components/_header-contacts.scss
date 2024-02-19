@@ -7,9 +7,9 @@
 		&:not(:last-child){
 			margin-right: 36px;
 		}
-
 	}
 }
+
 .contacts-link {
 	padding-left: 52px;
 	background-position: left center;
@@ -28,14 +28,32 @@
 		font-size: 18px;
 		line-height: 150%;
 		color: var(--gray-900);
-
+		transition: color 0.3s ease-in;
 	}
 
 	&--call {
 		background-image: url("../img/phone.svg");
 
 	}
+
 	&--mail {
 		background-image: url("../img/chat.svg");
+	}
+
+	&:focus {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+	}
+
+	&:hover {
+		.contacts-link__value {
+			color: var(--hover);
+		}
+	}
+
+	&:active {
+		.contacts-link__value {
+			color: var(--active);
+		}
 	}
 }

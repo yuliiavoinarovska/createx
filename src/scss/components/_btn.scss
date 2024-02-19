@@ -9,8 +9,23 @@
 	color: var(--white);
 	background: var(--primary);
 	border-radius: 4px;
+	transition: background 0.3s ease-in;
+
 	&--md {
 		line-height: 44px;
+	}
+
+	&:focus {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+	}
+
+	&:hover {
+		background: var(--hover);
+	}
+
+	&:active {
+		background: var(--active);
 	}
 }
 
@@ -23,12 +38,17 @@
 	line-height: 50px;
 	text-transform: uppercase;
 	color: var(--primary);
+	background: transparent;
 	border: 1px solid var(--primary);
 	border-radius: 4px;
+	transition: color 0.3s ease-in, background 0.3s ease-in, border 0.3s ease-in;
+
 	&--white {
 		color: var(--white);
 		border-color: var(--white);
+		background: transparent;
 	}
+
 	&--md {
 		line-height: 44px;
 	}
@@ -36,4 +56,23 @@
 		padding: 0 24px;
 		line-height: 36px;
 	}
+
+	&:focus {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+	}
+
+	&:hover {
+		color: var(--white);
+		background: var(--primary);
+		border-color: var(--primary);
+	}
+
+	&:active {
+		color: var(--white);
+		background: var(--active);
+		border-color: var(--active);
+	}
 }
+
+

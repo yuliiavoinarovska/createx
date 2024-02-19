@@ -82,14 +82,15 @@ a {
 	margin: 0 auto;
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
+
 	&--slider { // свой контейнер для слайдера, чтобы не обрезало тени
 		padding: 0;
 	}
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
-	outline: none;
-}
+// .js-focus-visible :focus:not(.focus-visible) {
+// 	outline: none;
+// }
 
 .centered {
 	text-align: center;
