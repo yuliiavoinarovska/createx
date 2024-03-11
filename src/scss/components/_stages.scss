@@ -7,9 +7,9 @@
 }
 
 .stages-list {
-	position: relative;//
+	position: relative;
 	display: flex;
-	justify-content: space-between;
+	gap: 30px;
 	counter-reset: section;
 
 	&__title {
@@ -33,6 +33,11 @@
 			line-height: 130%;
 			color: var(--gray-400);
 			transition: all 0.5s ease-in-out;
+
+			@include tablet {
+				font-size: 38px;
+				margin-bottom: 8px;
+			}
 		}
 
 		&:not(:last-child) {
@@ -45,14 +50,21 @@
 				height: 1px;
 				background: url(../../img/line.svg) center (center / cover) no-repeat;
 
-			}
+				@include small-desktop {
+					width: 70%;
+				}
 
+				@include tablet {
+				display: none;
+				}
+			}
 		}
 
 		&:hover {
 			&::before {
 				color: var(--primary);
 			}
+
 			.circle-1, .circle-2 {
 				opacity: 1;
 			}
@@ -87,6 +99,25 @@
 	transition: opacity 0.5s ease-out;
 }
 
+@include small-tablet {
+	.stages__title {
+		margin-bottom: 40px;
+	}
+	.stages-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
+		&__item {
+			width: 100%;
+		}
+	}
+}
 
-
+@include mobile {
+	.stages {
+		padding-bottom: 60px;
+	}
+	.stages-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

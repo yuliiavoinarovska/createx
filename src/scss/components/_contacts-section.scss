@@ -6,6 +6,10 @@
 	&__container {
 		display: flex;
 		justify-content: flex-end;
+
+		@include small-tablet {
+			justify-content: center;
+		}
 	}
 
 	&__form {
@@ -13,6 +17,10 @@
 		width: 495px;
 		min-height: 666px;
 		padding: 27px 40px 48px 40px;
+
+		@include mobile {
+			width: 100%;
+		}
     }
 }
 .contacts-form {
@@ -22,6 +30,10 @@
 		width: 100%;
 		text-align: center;
 		margin-bottom: 3px;
+
+		@include tablet {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__field {

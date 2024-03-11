@@ -37,6 +37,12 @@
     }
 }
 
+.work-slider__next, .work-slider__prev {
+	&:hover {
+		background-color: rgba(#fff, 1);
+	}
+}
+
 .work-slider-nav {
 
 	.swiper-slide {
@@ -60,5 +66,17 @@
 	}
 }
 
+@include tablet {
+	.work-slider {
+		.swiper-slide {
+			height: 400px;
+		}
+	}
+}
 
+@include small-tablet {
+	.work-slider-nav {
+		display: none;
+	}
+}
 

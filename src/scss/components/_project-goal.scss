@@ -4,11 +4,12 @@
 	.container {
 		display: flex;
 		justify-content: space-between;
+		gap: 40px;
 	}
 
 	&__left {
 		padding-top: 40px;
-		width: 600px;
+		max-width: 50%;
 	}
 
 	&__text {
@@ -21,11 +22,16 @@
 
 		&:not(:last-child) {
 			margin-bottom: 32px;
+
+			@include tablet {
+				margin-bottom: 24px;
+			}
 		}
 	}
 
 	&__right {
 		width: 495px;
+
 	}
 }
 
@@ -33,13 +39,11 @@
 	@include bg-small-shadow;
 	padding: 40px 57px;
 
-	&__list {
-
-	}
-
 	&__item {
 		display: flex;
 		justify-content: space-between;
+		align-items: baseline;
+		gap: 24px;
 		&:not(:last-child) {
 			margin-bottom: 16px;
 		}
@@ -65,5 +69,64 @@
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 160%;
+	}
+}
+
+@include tablet {
+	.project-goal {
+		padding: 40px 0 80px 0;
+
+		&__left {
+			padding-top: 24px;
+		}
+	}
+
+	.project-info {
+		padding: 40px;
+
+		&__value {
+			width: 180px;
+		}
+	}
+}
+
+@include small-tablet {
+	.project-goal {
+		.container {
+			flex-direction: column;
+		}
+
+		&__left {
+			max-width: 100%;
+		}
+
+		&__right {
+			width: 100%;
+
+		}
+	}
+	.project-info {
+
+		&__item {
+			justify-content: start;
+			gap: 50px;
+		}
+
+		&__category {
+			font-size: 14px;
+		}
+
+		&__value {
+			width: 240px;
+		}
+	}
+}
+
+@include mobile {
+	.project-info {
+
+		&__item {
+			gap: 24px;
+		}
 	}
 }

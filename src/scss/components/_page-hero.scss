@@ -17,6 +17,10 @@
 
 		&--mb60 {
 			margin-bottom: 60px;
+
+			@include small-tablet {
+				margin-bottom: 40px;
+			}
 		}
 
 	}
@@ -28,6 +32,7 @@
 	&--services-detail {
 		padding: 130px 0 80px 0;
 		background: url("../img/services-detail/bg.png") center center / cover no-repeat;
+
 		.page-hero__breadcrumbs {
 			margin-bottom: 35px;
 		}
@@ -35,6 +40,7 @@
 
 	&--work {
 		background: url("../img/work-bg.jpg") center center / cover no-repeat;
+
 		.page-hero__breadcrumbs {
 			margin-bottom: 53px;
 		}
@@ -47,4 +53,27 @@
 
 }
 
+@include tablet {
+	.page-hero {
+		padding: 110px 0 100px 0;
+		min-height: 100vh;
 
+		&--work-detail {
+			padding: 110px 0 40px 0;
+		}
+	}
+}
+
+@include small-tablet {
+	.page-hero {
+		padding: 90px 0 100px 0;
+
+		&__content {
+			max-width: 80%;
+		}
+
+		&--work-detail {
+			padding: 80px 0 20px 0;
+		}
+	}
+}

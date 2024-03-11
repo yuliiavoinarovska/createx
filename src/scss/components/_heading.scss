@@ -1,5 +1,7 @@
+//h1
 .hero-title {
 	margin: 0;
+	margin-bottom: 24px;
 	color: var(--gray-900);
 	font-family: "GothamPro";
 	font-size: 72px;
@@ -7,8 +9,13 @@
 	line-height: 130%;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+
+	&--white {
+		color: var(--white);
+	}
 }
 
+//h2
 .title {
 	margin: 0;
 	margin-bottom: 24px;
@@ -18,13 +25,9 @@
 	font-weight: 700;
 	line-height: 130%;
 
+
 	&--center {
 		text-align: center;
-	}
-
-	&--h2 {
-		font-size: 46px;
-		line-height: 150%;
 	}
 
 	&--h3 {
@@ -75,6 +78,14 @@
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 150%;
+
+	&--white {
+		color: var(--white);
+	}
+
+	@include small-tablet {
+		font-size: 18px;
+	}
 }
 
 .descr {
@@ -107,3 +118,101 @@
 	line-height: 150%;
 }
 
+@include tablet {
+	.hero-title {
+		font-size: 64px;
+	}
+
+	.title {
+		font-size: 38px;
+
+		&--h3 {
+			font-size: 28px;
+		}
+
+		&--h4 {
+			font-size: 24px;
+		}
+
+		&--h5 {
+			font-size: 20px;
+		}
+
+		&--h5-white {
+			font-size: 20px;
+		}
+
+		&--white {
+			font-size: 24px;
+		}
+	}
+
+	.descr {
+		margin: 0 auto;
+		width: 80%;
+		margin-bottom: 50px;
+	}
+}
+
+@include small-tablet {
+	.hero-title {
+		font-size: 60px;
+	}
+
+	.title {
+		font-size: 32px;
+
+		&--h3 {
+			font-size: 28px;
+		}
+
+		&--h4 {
+			font-size: 24px;
+		}
+
+		&--h5 {
+			font-size: 20px;
+		}
+
+		&--white {
+			font-size: 24px;
+		}
+
+		&--h5-white {
+			font-size: 20px;
+		}
+
+	}
+}
+
+@include mobile {
+	.hero-title {
+		font-size: 42px;
+	}
+
+	.title {
+		font-size: 28px;
+		margin-bottom: 16px;
+
+		&--h3 {
+			font-size: 26px;
+		}
+
+		&--h4 {
+			font-size: 24px;
+		}
+
+		&--h5 {
+			font-size: 20px;
+		}
+
+		&--white {
+			font-size: 22px;
+		}
+
+		&--h5-white {
+			font-size: 22px;
+		}
+
+	}
+}

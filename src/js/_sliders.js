@@ -1,14 +1,22 @@
 const { auto } = require('@popperjs/core');
 
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
-  // centeredSlides: true,
+//   centeredSlides: true,
   loop: true,
 
   navigation: {
     nextEl: '.portfolio-section__next',
     prevEl: '.portfolio-section__prev',
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
   },
 });
 
@@ -23,20 +31,28 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
 });
 
 const projectsSlider = new Swiper('.projects__items', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   // centeredSlides: true,
   loop: true,
-
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  },
   navigation: {
     nextEl: '.projects__next',
     prevEl: '.projects__prev',
   },
 });
 
+// work-slider
 const workSlidesNav = new Swiper('.work-slider-nav', {
   spaceBetween: 20,
-  slidesPerView: 10,
+  slidesPerView: auto,
   freeMode: true,
   watchSlidesProgress: true,
 });

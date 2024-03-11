@@ -3,6 +3,7 @@
 	padding-top: 80px;
 	padding-bottom: 70px;
 	background-color: var(--gray-200);
+
 	&--services {
 		padding-top: 0;
 		padding-bottom: 110px;
@@ -17,8 +18,11 @@
 	}
 
 	&__list {
+		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
 	}
 
 	&__logo {
@@ -29,4 +33,29 @@
 		}
 	}
 }
+
+@include small-tablet {
+	.partners {
+		padding-top: 60px;
+		padding-bottom: 40px;
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: auto;
+			gap: 30px;
+			justify-items: center;
+			grid-auto-rows: auto;
+		}
+	}
+}
+
+@include mobile {
+	.partners {
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
 

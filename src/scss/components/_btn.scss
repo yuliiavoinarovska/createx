@@ -46,7 +46,6 @@
 	&--white {
 		color: var(--white);
 		border-color: var(--white);
-		background: transparent;
 	}
 
 	&--md {
@@ -57,10 +56,10 @@
 		line-height: 36px;
 	}
 
-	&:focus {
-		outline: 2px solid var(--primary);
-		outline-offset: 2px;
-	}
+	// &:focus {
+	// 	outline: 2px solid var(--primary);
+	// 	outline-offset: 2px;
+	// }
 
 	&:hover {
 		color: var(--white);

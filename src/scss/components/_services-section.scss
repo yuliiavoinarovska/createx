@@ -1,5 +1,4 @@
 .services-section {
-	min-height: 880px;
 	padding: 212px 0 80px 0;
 	background-image: url("../../img/services-section/services-bg.jpg");
 	background-position: center;
@@ -12,9 +11,9 @@
 }
 
 .services-list {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	display: flex;
 	gap: 30px;
+	margin: 0 auto;
 
 }
 .services-item {
@@ -23,6 +22,7 @@
 	height: 285px;
 	padding: 90px 10px;
 	@include bg-small-shadow;
+
 	&__1 {
 		&::before {
 			content: "";
@@ -116,6 +116,7 @@
 	}
 
 	&__title {
+		margin: 0;
 		text-align: center;
 		transition: color 0.4s ease-in;
 	}
@@ -139,68 +140,25 @@
 	}
 }
 
+@include tablet {
+	.services-section {
+		padding:  100px 0 60px 0;
+	}
+
+	.services-list  {
+		max-width: 600px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@include mobile {
+	.services-section {
+		padding:  80px 0 40px 0;
+	}
+}
 
 
-
-//  Перенести в другое место, тренировалась
-// .size-wrapper {
-// 	padding: 50px 0 50px 0;
-// 	display: grid;
-// 	grid-template-columns: repeat(4, 1fr);
-// 	gap: 30px;
-// }
-
-// .size-item {
-// 	position: relative;
-// 	// width: 320px;
-// 	// height: 190px;
-// 	padding: 24px 30px;
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: space-between;
-
-
-// 	&__value {
-// 		display: block;
-// 		margin: 0;
-// 		font-weight: 900;
-// 		color: #9DE04C;
-// 		font-size: 124px;
-// 		line-height: 100%;
-// 		transition: color 0.3s ease-in;
-// 	}
-
-// 	&__descr {
-// 		margin: 0;
-// 		color: #222;
-// 		font-size: 20px;
-// 		font-weight: 700;
-// 		transition: color 0.2s ease-in;
-// 	}
-
-
-// 	&::before {
-// 		content: "";
-// 		position: absolute;
-// 		left: 0;
-// 		right: 0;
-// 		top: 65px;
-// 		bottom: 0;
-// 		z-index: -1;
-// 		background-color: #F5F6F7;
-// 	}
-
-// 	&:hover {
-// 		.size-item__value {
-// 			color: #222
-// 		}
-
-// 		.size-item__descr {
-// 			color: #9DE04C;
-// 		}
-// 	}
-
-// }
 
 
 

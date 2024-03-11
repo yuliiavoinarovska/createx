@@ -1,13 +1,13 @@
 .portfolio-item {
-	width: 390px;
-	height: 440px;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	@include bg-small-shadow;
 
 	&__image {
-		width: 390px;
+		width: 100%;
 		height: 345px;
 		border-radius: 4px 4px 0 0;
 		object-fit: cover;
@@ -22,6 +22,10 @@
 
 	&__title {
 		margin-bottom: 4px;
+		text-align: center;
+		@include small-desktop{
+			font-size: 18px;
+		}
 	}
 
 	&__btn {
@@ -44,4 +48,26 @@
 }
 
 
+@include tablet {
+	.portfolio-item__image {
+		height: 270px;
+	}
+}
+@include small-tablet {
+
+	.portfolio-item__image {
+		height: 250px;
+	}
+
+	.portfolio-item__title {
+		font-size: 18px;
+		max-width: 60%;
+	}
+}
+
+@include mobile {
+	.portfolio-item__title {
+		max-width: 100%;
+	}
+}
 

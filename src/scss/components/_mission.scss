@@ -1,11 +1,9 @@
 .mission {
-	// min-height: 750px;
-	padding: 120px 0 0 0;
+	padding-top: 120px;
 
 	&__list {
 		--mission-gap: 97px;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
 		margin-bottom: 28px;
 		gap: calc(var(--mission-gap) * 2);
 	}
@@ -18,7 +16,6 @@
 		background-size: 48px 48px;
 		background-repeat: no-repeat;
 
-		// разделитель
 		&:not(:last-child) {
 			&::after {
 				content: "";
@@ -31,6 +28,10 @@
 				background-position: center;
 				background-size: cover;
 				background-repeat: no-repeat;
+
+				@include small-tablet {
+					display: none;
+				}
 			}
 		}
 
@@ -83,5 +84,80 @@
 		display: flex;
 		align-items: end;
 	}
-
 }
+
+@include small-desktop {
+	.mission {
+
+		&__list {
+			--mission-gap: 60px;
+		}
+	}
+}
+
+@include tablet {
+	.mission {
+		padding-top: 60px;
+
+		&__list {
+			--mission-gap: 36px;
+		}
+	}
+
+	.know-form {
+		top: 24px;
+		padding: 48px 36px;
+
+		&__content {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+
+		&__field {
+			width: 100%;
+			margin-right: 0;
+
+			&--flex {
+				flex-grow: 0;
+		}	}
+
+		&__btn {
+			width: 100%;
+		}
+	}
+}
+
+@include small-tablet {
+	.mission {
+		&__list {
+			flex-direction: column;
+			margin: 0 auto;
+			width: 80%;
+			gap: 50px;
+			--mission-gap: 0;
+		}
+	}
+
+	.know-form {
+		padding: 48px;
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+
+		&__field {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		&__btn {
+			width: 100%;
+		}
+	}
+}
+
+

@@ -1,4 +1,5 @@
 .hero {
+	padding: 220px 0;
 	background-color: var(--gray-800);
 	background-image: url("../img/bg-image.jpg");
 	background-position: center;
@@ -6,50 +7,53 @@
 	background-repeat: no-repeat;
 
 	&__content {
-		padding: 220px 0;
-		max-width: 590px;
-
+		width: 620px;
 	}
-}
 
-.main-title {
-	margin-bottom: 24px;
-	margin: 0;
-	color: var(--gray-900);
-	font-size: 72px;
-	font-weight: 700;
-	line-height: 130%;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-
+	&__title {
 		span {
 			color: var(--primary);
 		}
-
-		&-home {
-			color: var(--white);
-		}
-
-}
-
-.main-descr {
-	margin: 0;
-	color: var(--gray-700);
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 150%;
-
-	&-home {
-		margin-bottom: 31px;
-		color: var(--white);
 	}
 
+	&__descr {
+		margin-bottom: 50px;
+	}
+
+	&__btns {
+		button {
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+		}
+	}
 }
 
-.hero__btns {
-	.btn {
-		&:not(:last-child) {
-			margin-right: 24px;
+@include tablet {
+	.hero {
+		padding: 150px 0;
+	}
+}
+
+@include mobile {
+	.hero {
+		padding: 80px 0;
+
+		&__content {
+			width: 400px;
+		}
+
+		&__descr {
+			margin-bottom: 36px;
+		}
+
+		&__btns {
+			button {
+				&:not(:last-child) {
+					margin-bottom: 24px;
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }

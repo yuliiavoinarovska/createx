@@ -33,7 +33,7 @@
 		text-align: center;
 
 		&:first-child {
-			padding: 0 24px;
+			padding: 10px 24px;
 			text-align: left;
 		}
 	}
@@ -92,6 +92,54 @@
 	}
 }
 
+@include tablet {
+	.table {
+		&__heading {
+			font-size: 18px;
+		}
 
+		&__subheading {
+			font-size: 16px;
+		}
+		&__th {
+			padding: 24px;
+		}
+		&__btn {
+			padding: 0 10px;
+			font-size: 14px;
+		}
+		&__col {
+			width: 25%;
+			line-height: 120%;
+		}
+	}
+}
+
+@include small-tablet {
+	.table {
+		&__th {
+			padding: 14px;
+		}
+
+		&__btn {
+			padding: 0 10px;
+			font-size: 12px;
+		}
+	}
+}
+
+@include mobile {
+	.pricing {
+		padding: 60px 0;
+	}
+
+	.table-wrapper {
+		overflow-x: scroll;
+	}
+
+	.table {
+		width: 750px;
+	}
+}
 
 
