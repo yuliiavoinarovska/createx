@@ -18,6 +18,14 @@
 		bottom: 0;
 		z-index: 3;
 		background-color: rgba( #1e212c, 0.6);
+		transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+	}
+
+	&--played {
+		&::before {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 
 	&__content{
@@ -38,11 +46,12 @@
 		height: 80px;
 		background: var(--primary);
 		transform: translate(-50%, -50%);
-		transition: background 0.3s ease-in;
+		transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
 
-		&:focus {
-			outline: 2px solid var(--primary);
-			outline-offset: 2px;
+		svg {
+			fill: var(--white);
+			width: 23px;
+			height: 26px;
 		}
 
 		&:hover {
@@ -53,42 +62,9 @@
 			background: var(--active);
 		}
 
-		svg {
-			fill: var(--white);
-			width: 23px;
-			height: 26px;
-		}
-	}
-
-	&__muted {
-		@include flex-all-center;
-		position: absolute;
-		left: 32px;
-		bottom: 32px;
-		z-index: 10;
-		border-radius: 100%;
-		width: 40px;
-		height: 40px;
-		background: rgba( #fff, 0.12);
-		transition: background 0.3s ease-in;
-
-		svg {
-			fill: var(--white);
-			width: 20px;
-			height: 20px;
-		}
-
-		&:focus {
-			outline: 2px solid var(--primary);
-			outline-offset: 2px;
-		}
-
-		&:hover {
-			background: rgba( #fff, 0.4);
-		}
-
-		&:active {
-			background: rgba( #fff, 0.4);
+		&--played {
+			opacity: 0;
+			visibility: hidden;
 		}
 	}
 }

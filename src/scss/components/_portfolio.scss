@@ -60,9 +60,14 @@
 	margin-bottom: 60px;
 
 	&__item {
+		display: none;
 
 		&--visible {
 			display: block;
+		}
+
+		&--visible-more {
+			display: block !important;
 		}
 	}
 }
@@ -88,6 +93,7 @@
 
 	&:hover {
 		color: var(--primary);
+
 		svg {
 			fill: var(--primary);
 		}
@@ -165,3 +171,5 @@
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
+
+

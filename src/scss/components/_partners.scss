@@ -33,11 +33,22 @@
 		}
 	}
 }
+@include tablet {
+	.partners--services{
+		padding-top: 0;
+		padding-bottom: 80px;
+	}
+}
 
 @include small-tablet {
 	.partners {
 		padding-top: 60px;
 		padding-bottom: 40px;
+
+		&--services {
+			padding-top: 0;
+			padding-bottom: 80px;
+		}
 
 		&__list {
 			display: grid;
@@ -52,6 +63,10 @@
 
 @include mobile {
 	.partners {
+		&--services {
+			padding-top: 0;
+			padding-bottom: 60px;
+		}
 		&__list {
 			grid-template-columns: repeat(2, 1fr);
 		}

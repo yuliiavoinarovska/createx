@@ -48,7 +48,6 @@
 			font-size: 18px;
 			font-weight: 700;
 			vertical-align: bottom;
-
 		}
 	}
 
@@ -93,6 +92,10 @@
 }
 
 @include tablet {
+	.pricing {
+		padding: 80px 0;
+	}
+
 	.table {
 		&__heading {
 			font-size: 18px;
@@ -101,13 +104,16 @@
 		&__subheading {
 			font-size: 16px;
 		}
+
 		&__th {
 			padding: 24px;
 		}
+
 		&__btn {
 			padding: 0 10px;
 			font-size: 14px;
 		}
+
 		&__col {
 			width: 25%;
 			line-height: 120%;

@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 const { auto } = require('@popperjs/core');
 
+// eslint-disable-next-line no-undef
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 30,
-//   centeredSlides: true,
+  //   centeredSlides: true,
   loop: true,
 
   navigation: {
@@ -20,6 +22,7 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+// eslint-disable-next-line no-undef
 const testimonialsSlider = new Swiper('.testimonials__items', {
   slidesPerView: 1,
   loop: true,
@@ -30,6 +33,7 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
   },
 });
 
+// eslint-disable-next-line no-undef
 const projectsSlider = new Swiper('.projects__items', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -50,6 +54,7 @@ const projectsSlider = new Swiper('.projects__items', {
 });
 
 // work-slider
+// eslint-disable-next-line no-undef
 const workSlidesNav = new Swiper('.work-slider-nav', {
   spaceBetween: 20,
   slidesPerView: auto,
@@ -57,6 +62,7 @@ const workSlidesNav = new Swiper('.work-slider-nav', {
   watchSlidesProgress: true,
 });
 
+// eslint-disable-next-line no-undef
 const workSlider = new Swiper('.work-slider', {
   spaceBetween: 10,
   slidesPerView: 1,

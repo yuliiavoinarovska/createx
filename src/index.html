@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
-	@include('blocks/head.html')
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+	<title>Createx</title>
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
 <body id="page" class="page__body">
 	<div class="site-container">
 		@include('blocks/header.html')
@@ -15,12 +26,14 @@
 			@include('blocks/facts.html')
 			@include('blocks/recent-news.html')
 			@include('blocks/contacts-section.html')
-
 			@include('blocks/footer.html')
 
 			<!-- @include('html/h1.html') пример include -->
 		</main>
 	</div>
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script defer src="js/main.js"></script>
 </body>
 </html>
 
