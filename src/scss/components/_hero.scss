@@ -1,5 +1,5 @@
 .hero {
-	padding: 220px 0;
+	padding: 180px 0;
 	background-color: var(--gray-800);
 	background-image: url("../img/bg-image.jpg");
 	background-position: center;
@@ -21,39 +21,42 @@
 	}
 
 	&__btns {
-		button {
-			&:not(:last-child) {
-				margin-right: 24px;
-			}
-		}
+		display: inline-flex;
+		gap: 24px;
+		flex-wrap: wrap;
 	}
 }
 
 @include tablet {
 	.hero {
 		padding: 150px 0;
+
+		&__content {
+			width: 85%;
+		}
 	}
 }
 
-@include mobile {
+@include small-tablet {
 	.hero {
-		padding: 80px 0;
-
 		&__content {
-			width: 400px;
+			width: 100%;
 		}
 
 		&__descr {
 			margin-bottom: 36px;
 		}
+	}
+}
 
-		&__btns {
-			button {
-				&:not(:last-child) {
-					margin-bottom: 24px;
-					margin-right: 0;
-				}
-			}
+@include mobile {
+	.hero {
+		&__title {
+			font-size: 32px;
+		}
+
+		&__descr {
+			margin-bottom: 36px;
 		}
 	}
 }

@@ -50,6 +50,13 @@
 		height: 148px;
 		position: relative;
 
+		.progress {
+			stroke:rgb(248, 152, 40);
+		}
+
+		.progress-bg {
+			stroke:rgba(248, 152, 40, 0.3);
+		}
 
 		svg {
 			position: absolute;
@@ -57,6 +64,46 @@
 			right: 0;
 			top: 0;
 			bottom: 0;
+		}
+
+		&--1 {
+			.progress {
+				stroke:rgb(248, 152, 40);
+			}
+
+			.progress-bg {
+				stroke:rgba(248, 152, 40, 0.3);
+			}
+		}
+
+		&--2 {
+			.progress {
+				stroke:rgb(245, 47, 110);
+			}
+
+			.progress-bg {
+				stroke:rgba(245, 47, 110, 0.3);
+			}
+		}
+
+		&--3 {
+			.progress {
+				stroke:rgb(90, 135, 252);
+			}
+
+			.progress-bg {
+				stroke:rgba(90, 135, 252, 0.3);
+			}
+		}
+
+		&--4 {
+			.progress {
+				stroke:rgb(3, 206, 164);
+			}
+
+			.progress-bg {
+				stroke:rgba(3, 206, 164, 0.3);
+			}
 		}
 	}
 

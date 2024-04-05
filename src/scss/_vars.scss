@@ -1,11 +1,8 @@
-// если вы хотите использовать sass-переменные - удалите root
+// для використовування sass-змынних - видалити root
 
 :root {
 	// base
 	--font-family: "Lato", sans-serif;
-	// --content-width: 1230px;
-	// --container-offset: 15px;
-	// --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
 	// colors
 	--white: #fff;
@@ -17,10 +14,7 @@
 	--gray-400: #D7DADD;
 	--gray-300: #E5E8ED;
 	--gray-200: #F4F5F6;
-	--primary: #FF5A30;
+	--primary: #F05C37;
 	--active: #FC3300;
 	--hover: #FC3300;
-
-
-
 }

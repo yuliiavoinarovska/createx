@@ -22,6 +22,10 @@ const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-imagemin');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const uglify = require('gulp-uglify-es').default;
+const sourcemaps = require('gulp-sourcemaps');
 const {
   readFileSync,
 } = require('fs');
@@ -29,7 +33,6 @@ const typograf = require('gulp-typograf');
 const webp = require('gulp-webp');
 
 const mainSass = gulpSass(sass);
-const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
 const path = require('path');
 const zip = require('gulp-zip');
@@ -124,82 +127,6 @@ const stylesBackend = () => src(paths.srcScss)
   .pipe(dest(paths.buildCssFolder))
   .pipe(browserSync.stream());
 
-// scripts
-const scripts = () => src(paths.srcMainJs)
-  .pipe(plumber(
-    notify.onError({
-      title: 'JS',
-      message: 'Error: <%= error.message %>',
-    }),
-  ))
-  .pipe(webpackStream({
-    mode: isProd ? 'production' : 'development',
-    output: {
-      filename: 'main.js',
-    },
-    module: {
-      rules: [{
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['@babel/preset-env', {
-                targets: 'defaults',
-              }],
-            ],
-          },
-        },
-      }],
-    },
-    devtool: !isProd ? 'source-map' : false,
-  }))
-  .on('error', function (err) {
-    console.error('WEBPACK ERROR', err);
-    this.emit('end');
-  })
-  .pipe(dest(paths.buildJsFolder))
-  .pipe(browserSync.stream());
-
-// scripts backend
-const scriptsBackend = () => src(paths.srcMainJs)
-  .pipe(plumber(
-    notify.onError({
-      title: 'JS',
-      message: 'Error: <%= error.message %>',
-    }),
-  ))
-  .pipe(webpackStream({
-    mode: 'development',
-    output: {
-      filename: 'main.js',
-    },
-    module: {
-      rules: [{
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['@babel/preset-env', {
-                targets: 'defaults',
-              }],
-            ],
-          },
-        },
-      }],
-    },
-    devtool: false,
-  }))
-  .on('error', function (err) {
-    console.error('WEBPACK ERROR', err);
-    this.emit('end');
-  })
-  .pipe(dest(paths.buildJsFolder))
-  .pipe(browserSync.stream());
-
 const resources = () => src(`${paths.resourcesFolder}/**`)
   .pipe(dest(buildFolder));
 
@@ -230,6 +157,31 @@ const htmlInclude = () => src([`${srcFolder}/*.html`])
   .pipe(dest(buildFolder))
   .pipe(browserSync.stream());
 
+// scripts
+const scripts = () => src('./src/js/main.js')
+  .pipe(webpackStream({
+    output: {
+      filename: 'main.js',
+    },
+    module: {
+      rules: [{
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', { targets: 'defaults' }]],
+          },
+        },
+      }],
+    },
+  }))
+  .pipe(sourcemaps.init())
+  .pipe(uglify().on('error', notify.onError()))
+  .pipe(sourcemaps.write('.')
+    .pipe(dest('./app/js')))
+  .pipe(browserSync.stream());
+
 const watchFiles = () => {
   browserSync.init({
     server: {
@@ -238,13 +190,13 @@ const watchFiles = () => {
   });
 
   watch(paths.srcScss, styles);
-  watch(paths.srcFullJs, scripts);
   watch(`${paths.srcblocksFolder}/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(paths.srcSvg, svgSprites);
+  watch('./src/js/**/*.js', scripts);
 };
 
 const cache = () => src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,woff2}`, {
@@ -276,6 +228,7 @@ const htmlMinify = () => src(`${buildFolder}/**/*.html`)
   }))
   .pipe(dest(buildFolder));
 
+// eslint-disable-next-line no-unused-vars
 const zipFiles = (done) => {
   del.sync([`${buildFolder}/*.zip`]);
   return src(`${buildFolder}/**/*.*`, {})
@@ -298,7 +251,7 @@ const toProd = (done) => {
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watchFiles);
 
 // eslint-disable-next-line max-len
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites);
+exports.backend = series(clean, htmlInclude, scripts, stylesBackend, resources, images, webpImages, svgSprites);
 
 // eslint-disable-next-line max-len
 exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);

@@ -133,7 +133,8 @@
 
 	.portfolio-tabs-nav {
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 70px);
+		grid-template-rows: repeat(2, 60px);
+		grid-auto-rows: 60px;
 		gap: 8px;
 
 		&__btn {
@@ -164,6 +165,10 @@
 }
 
 @include mobile {
+	.portfolio-tabs-nav {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 	.portfolio-tabs-nav__icon {
 		display: none;
 	}

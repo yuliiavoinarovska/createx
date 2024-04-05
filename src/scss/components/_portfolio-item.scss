@@ -49,10 +49,17 @@
 
 
 @include tablet {
-	.portfolio-item__image {
-		height: 270px;
+
+	.portfolio-item {
+		&__image {
+			height: 270px;
+		}
+		&__btn {
+			margin-bottom: 0;
+		}
 	}
 }
+
 @include small-tablet {
 
 	.portfolio-item__image {
@@ -61,13 +68,7 @@
 
 	.portfolio-item__title {
 		font-size: 18px;
-		max-width: 60%;
 	}
 }
 
-@include mobile {
-	.portfolio-item__title {
-		max-width: 100%;
-	}
-}
 

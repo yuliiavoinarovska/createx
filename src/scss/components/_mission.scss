@@ -11,6 +11,7 @@
 	&__item {
 		position: relative;
 		padding-top: 72px;
+		width: calc(100% / 3);
 		text-align: center;
 		background-position: top center;
 		background-size: 48px 48px;
@@ -80,6 +81,7 @@
 			}
 		}
 	}
+
 	&__content {
 		display: flex;
 		align-items: end;
@@ -131,11 +133,14 @@
 @include small-tablet {
 	.mission {
 		&__list {
-			flex-direction: column;
 			margin: 0 auto;
-			width: 80%;
+			flex-direction: column;
+			align-items: center;
 			gap: 50px;
 			--mission-gap: 0;
+		}
+		&__item {
+			width: 70%;
 		}
 	}
 
@@ -158,6 +163,20 @@
 			width: 100%;
 		}
 	}
+
 }
+
+@include mobile {
+	.mission {
+		&__item {
+			width: 90%;
+		}
+	}
+	.know-form {
+		padding: 36px 16px;
+	}
+}
+
+
 
 

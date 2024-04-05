@@ -15,11 +15,6 @@
 		line-height: 44px;
 	}
 
-	&:focus {
-		outline: 2px solid var(--primary);
-		outline-offset: 2px;
-	}
-
 	&:hover {
 		background: var(--hover);
 	}
@@ -51,15 +46,11 @@
 	&--md {
 		line-height: 44px;
 	}
+
 	&--sm {
 		padding: 0 24px;
 		line-height: 36px;
 	}
-
-	// &:focus {
-	// 	outline: 2px solid var(--primary);
-	// 	outline-offset: 2px;
-	// }
 
 	&:hover {
 		color: var(--white);
