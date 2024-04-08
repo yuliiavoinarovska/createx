@@ -23,6 +23,7 @@
 	&__title {
 		margin-bottom: 4px;
 		text-align: center;
+
 		@include small-desktop{
 			font-size: 18px;
 		}
@@ -32,7 +33,7 @@
 		margin-top: 24px;
 		margin-bottom: -70px;
 		padding: 0 32px;
-		transition: margin 0.5s ease-out;
+		transition: all 0.5s ease-out;
 		transition-delay: 0.2s;
 	}
 
@@ -47,15 +48,21 @@
 	}
 }
 
-
 @include tablet {
 
 	.portfolio-item {
 		&__image {
 			height: 270px;
 		}
+
 		&__btn {
 			margin-bottom: 0;
+		}
+
+		&:hover {
+			.portfolio-item__image {
+				height: 270px;
+			}
 		}
 	}
 }
@@ -63,7 +70,8 @@
 @include small-tablet {
 
 	.portfolio-item__image {
-		height: 250px;
+		height: 270px;
+
 	}
 
 	.portfolio-item__title {
