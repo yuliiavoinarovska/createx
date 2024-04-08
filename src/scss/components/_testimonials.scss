@@ -12,10 +12,8 @@
 		max-width: 600px;
 	}
 
-
 	&__title {
 		margin-bottom: 30px;
-
 	}
 
 	&__items {
@@ -35,7 +33,7 @@
 }
 
 .testimonials-item {
-	padding-right: 12px; // чтобы ховер кнопок не обрезало
+	padding-right: 12px; // щоб не обрізало ховер кнопок
 	padding-bottom: 12px;
 
 	&__image {

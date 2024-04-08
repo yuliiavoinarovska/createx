@@ -8,7 +8,6 @@
 	border-radius: 4px;
 	height: 500px;
 
-	// оверлей для видео
 	&::before {
 		content: "";
 		position: absolute;
@@ -74,6 +73,7 @@
 		padding: 80px 0 40px 0;
 	}
 }
+
 @include small-tablet {
 	.video-block {
 		width: 100%;

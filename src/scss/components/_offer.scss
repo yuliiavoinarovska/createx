@@ -128,12 +128,13 @@
 @include small-tablet {
 	.offer {
 		padding: 60px 0;
+
 		&__wrapper {
 			@include bg-small-shadow;
 			padding: 24px;
 			display: block;
-
 		}
+
 		&__image {
 			display: none;
 		}

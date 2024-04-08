@@ -17,7 +17,6 @@
 		&--revers {
 			flex-direction: row-reverse;
 		}
-
 	}
 
 	&__image {
@@ -41,6 +40,7 @@
 		background: var(--white);
 	}
 }
+
 .services-bg-1 {
 	position: fixed;
 	z-index: -5;

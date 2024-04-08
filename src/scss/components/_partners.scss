@@ -22,14 +22,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
 	}
 
 	&__logo {
-		-webkit-filter: grayscale(1);
+		filter: grayscale(1);
 
 		&:hover {
-			-webkit-filter: grayscale(0);
+			filter: grayscale(0);
 		}
 	}
 }
@@ -53,10 +52,8 @@
 		&__list {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: auto;
 			gap: 30px;
 			justify-items: center;
-			grid-auto-rows: auto;
 		}
 	}
 }

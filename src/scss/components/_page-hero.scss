@@ -2,7 +2,6 @@
 	padding: 130px 0 180px 0;
 	background-color: var(--gray-200);
 
-
 	&__breadcrumbs {
 		margin-bottom: 40px;
 	}
@@ -21,11 +20,10 @@
 				margin-bottom: 40px;
 			}
 		}
-
 	}
 
 	&--services {
-		background: url("../img/services/background.png") center center / cover no-repeat;
+		background: url("../img/services-p/background.png") center center / cover no-repeat;
 	}
 
 	&--services-detail {

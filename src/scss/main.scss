@@ -1,4 +1,4 @@
-// базовые подключения
+// базові підключення
 @import "vars";
 @import "mixins";
 @import "fonts";
@@ -8,9 +8,9 @@
 @import "./components/btn";
 @import "./components/form-field";
 
-//  компоненты страницы
+//  компоненти сторінки
 @import "./components/slider-nav";
-// подключения компонентов страницы (большие компоненты)
+// підключення компонентів сторінки (великі компоненти)
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about-section";
@@ -22,7 +22,6 @@
 @import "./components/recent-news";
 @import "./components/contacts-section";
 @import "./components/footer";
-
 @import "./components/page-hero";
 @import "./components/services-content";
 @import "./components/offer";
@@ -35,9 +34,7 @@
 @import "./components/project-goal";
 @import "./components/decisions";
 
-
-
-// подключения компонентов страницы (маленькие компоненты)
+// підключення компонентів сторінки (малі компоненти)
 @import "./components/modal";
 @import "./components/learn-more";
 @import "./components/work-slider";

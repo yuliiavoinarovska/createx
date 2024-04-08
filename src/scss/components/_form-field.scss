@@ -1,7 +1,6 @@
 .form-field {
 	@include flex-column-start;
 
-
 	&__caption {
 		margin-bottom: 8px;
 		color: var(--gray-800);

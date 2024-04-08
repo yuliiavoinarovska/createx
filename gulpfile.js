@@ -22,6 +22,7 @@ const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
 const image = require('gulp-imagemin');
+// eslint-disable-next-line no-unused-vars
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const uglify = require('gulp-uglify-es').default;
@@ -102,7 +103,6 @@ const styles = () => src(paths.srcScss, { sourcemaps: !isProd })
   .pipe(autoprefixer({
     cascade: false,
     grid: true,
-    overrideBrowserslist: ['last 5 versions'],
   }))
   .pipe(gulpif(isProd, cleanCSS({
     level: 2,
@@ -122,7 +122,6 @@ const stylesBackend = () => src(paths.srcScss)
   .pipe(autoprefixer({
     cascade: false,
     grid: true,
-    overrideBrowserslist: ['last 5 versions'],
   }))
   .pipe(dest(paths.buildCssFolder))
   .pipe(browserSync.stream());

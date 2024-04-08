@@ -29,18 +29,28 @@
 }
 
 .nav {
+
 	&__list {
 		@include flex-v-center;
 		gap: 40px;
 	}
 
 	&__link {
-		font-family: Lato;
+		display: block;
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 160%;
 		color: var(--gray-800);
 		transition: color 0.3s ease-in;
+		display: flex;
+		align-items: flex-end;
+		gap: 4px;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: var(--primary);
+		}
 
 		&--current {
 			color: var(--primary);
@@ -48,11 +58,43 @@
 
 		&:hover {
 			color: var(--hover);
+			svg {
+				fill: var(--hover);
+			}
 		}
 
 		&:active {
 			color: var(--active);
 		}
+
+		&--secondary {
+			font-weight: 400;
+			width: 150px;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		&:hover {
+			.nav__secondary {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__secondary {
+		display: grid;
+		gap: 16px;
+		position: absolute;
+		left: -24px;
+		top: 22px;
+		background-color: var(--white);
+		padding: 16px 24px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.6s;
 	}
 }
 
@@ -114,7 +156,6 @@
 	position: relative;
 	z-index: 50;
 	cursor: poiner;
-
 
 	span{
 		position: absolute;
