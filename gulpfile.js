@@ -25,7 +25,6 @@ const image = require('gulp-imagemin');
 // eslint-disable-next-line no-unused-vars
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
-const uglify = require('gulp-uglify-es').default;
 const sourcemaps = require('gulp-sourcemaps');
 const {
   readFileSync,
@@ -176,7 +175,12 @@ const scripts = () => src('./src/js/main.js')
     },
   }))
   .pipe(sourcemaps.init())
-  .pipe(uglify().on('error', notify.onError()))
+  .pipe(plumber(
+    notify.onError({
+      title: 'JS',
+      message: 'Error: <%= error.message %>',
+    }),
+  ))
   .pipe(sourcemaps.write('.')
     .pipe(dest('./app/js')))
   .pipe(browserSync.stream());

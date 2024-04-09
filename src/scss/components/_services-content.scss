@@ -42,14 +42,14 @@
 }
 
 .services-bg-1 {
-	position: fixed;
+	position: absolute;
 	z-index: -5;
 	right: 0;
 	top: 420px;
 }
 
 .services-bg-2 {
-	position: fixed;
+	position: absolute;
 	z-index: -5;
 	left: -250px;
 	bottom: -260px;
@@ -111,7 +111,6 @@
 
 		&__image {
 			height: 220px;
-
 		}
 	}
 }
