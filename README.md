@@ -1,7 +1,7 @@
 # Багатосторінковий сайт будівельної компанії Createx
 ## <a href="https://yuliiavoinarovska.github.io/createx/" target="_blank">Переглянути</a> 
 
-> Використовується збірка Gulp 4 + Webpack
+> Використовується Gulp 4 + Webpack
 
 ## Описання проекту
 
