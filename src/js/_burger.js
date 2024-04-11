@@ -31,11 +31,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   dropdownTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const dropdownMenu = trigger.nextElementSibling;
-      dropdownMenu.classList.toggle('active');
-      dropdownIcon.classList.toggle('active');
-      dropdownItem.classList.toggle('active');
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        const dropdownMenu = trigger.nextElementSibling;
+        dropdownMenu.classList.toggle('active');
+        dropdownIcon.classList.toggle('active');
+        dropdownItem.classList.toggle('active');
+      }
     });
   });
 });
