@@ -1,48 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#111111">
-    <title>Createx</title>
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Createx</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script defer src="js/main.js"></script>
 </head>
+
 <body class="page__body">
     <div class="site-container">
         <header class="header header--secondary">
     <div class="container header__container">
-        <a href="#" class="logo">
+        <a href="https://yuliiavoinarovska.github.io/createx.html" class="logo">
             <img src="img/logo.svg" alt="Createx Logo">
         </a>
         <nav class="nav header__nav">
             <ul class="nav__list list-reset">
-                <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
-                <li class="nav__item"><a href="#" class="nav__link nav__link--current">Services</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">News</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">About Us</a>
+                </li>
+                <li class="nav__item ">
+                    <a href="https://yuliiavoinarovska.github.io/createx/services.html" class="nav__link dropdown">
+                        Services
+                        <svg class="dropdown__icon">
+                            <use xlink:href="img/sprite.svg#drop-down"></use>
+                        </svg>
+                    </a>
+                    <ul class="list-reset dropdown-menu">
+                        <li class="nav__item">
+                            <a href="https://yuliiavoinarovska.github.io/createx/services-inner.html" class="nav__link nav__link--drop">Interior Design</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--drop">Constraction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--drop">Project Development</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--drop">Repairs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="https://yuliiavoinarovska.github.io/createx/work.html" class="nav__link dropdown">
+                        Work
+                        <svg class="dropdown__icon">
+                            <use xlink:href="img/sprite.svg#drop-down"></use>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu list-reset">
+                        <li class="nav__item nav__item-mobile">
+                            <a href="https://yuliiavoinarovska.github.io/createx/work.html" class="nav__link nav__link--drop">Our projects</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://yuliiavoinarovska.github.io/createx/work-inner.html" class="nav__link nav__link--drop">Project page</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">News</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contacts</a>
+                </li>
             </ul>
+            <div class="header-contacts">
+                <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
+                    <span class="contacts-link__caption">Call us</span>
+                    <span class="contacts-link__value">(405) 555-0128</span>
+                </a>
+                <a href="mailto:hello@createx.com" class="header-contacts__link contacts-link contacts-link--mail">
+                    <span class="contacts-link__caption">Talk to us</span>
+                    <span class="contacts-link__value">hello@createx.com</span>
+                </a>
+            </div>
         </nav>
-        <div class="header-contacts">
-            <a href="tel:4055550128" class="header-contacts__link contacts-link contacts-link--call">
-                <span class="contacts-link__caption">Call us</span>
-                <span class="contacts-link__value">(405) 555-0128</span>
-            </a>
-            <a href="mailto:hello@createx.com" class="header-contacts__link contacts-link contacts-link--mail">
-                <span class="contacts-link__caption">Talk to us</span>
-                <span class="contacts-link__value">hello@createx.com</span>
-            </a>
-        </div>
         <button class="btn-reset burger">
             <span></span>
             <span></span>
             <span></span>
         </button>
     </div>
+    <div class="overlay"></div>
 </header>
 
         <main>
@@ -287,8 +336,5 @@
 
         </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="js/main.js"></script>
 </body>
 </html>
