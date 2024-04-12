@@ -11,6 +11,8 @@ package-lock.json
 
 # misc
 .DS_Store
+.ecrc
+.editorconfig
 .env.local
 .env.development.local
 .env.test.local
