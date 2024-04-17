@@ -1,31 +1,36 @@
-#  Пет проект <a href="https://yuliiavoinarovska.github.io/createx/" target="_blank">Веб-сайт будівельної компанії Createx</a>  
-> Використовується Gulp 4 + Webpack
+# Createx Website
 
-## Опис проекту
-Цей проект є веб-сайтом, розробленим з використанням HTML, CSS та JavaScript, з упором на дотримання сучасних практик та методів розробки.
+[Visit Website](https://yuliiavoinarovska.github.io/createx/)
+ 
+> Gulp 4 + Webpack
 
-На даний момент реалізовані сторінки (весь функціонал та інтерактив):
+## Overview
+This project is a website developed using HTML, CSS, and JavaScript, with a focus on following best practices and modern development techniques. It features a mobile-responsive design with a mobile menu, popup windows, sliders on various pages, thematic sorting tabs for showcasing projects, and a smooth scroll-to-top button. The website is fully responsive, adapting to screen sizes down to 320px width (without design layouts).
+
+Currently, the following pages (with full functionality and interactivity) have been implemented:
 1. <a href="https://yuliiavoinarovska.github.io/createx/" target="_blank">Main page</a>  
 2. <a href="https://yuliiavoinarovska.github.io/createx/services.html" target="_blank">Services</a>
 3. <a href="https://yuliiavoinarovska.github.io/createx/services-inner.html" target="_blank">Separate service page</a>
 4. <a href="https://yuliiavoinarovska.github.io/createx/work.html" target="_blank">Work</a>
 5. <a href="https://yuliiavoinarovska.github.io/createx/work-inner.html" target="_blank">Project page</a>
 
-# Технології та методології:
+# Technologies and Methodologies:
 ## HTML
-При розробці HTML-сторінок був застосований `підхід модульної верстки` для створення компонентів та модулів з метою їх повторного використання та легкої модифікації. Кожен компонент містить свою власну розмітку та стилі, що сприяє їхній незалежності від інших елементів сторінки.
+Modular markup approach was applied in developing HTML pages to create components and modules for their reusability and easy modification. Each component contains its own markup and styles, contributing to their independence from other elements on the page.
 
 ## CSS 
-Використовувався `препроцесор SASS` у синтаксисі SCSS та `методологія БЕМ` для створення структурованого та підтримуваного коду CSS та HTML. `Створені css-змінні` для кольорів сайту та основного шрифту а також `міксини` для наборів стилів, що часто використовуються (брейкпоінти, flex, фон з тінню та ін). Для стилів заголовків, текстів, елементів форм та кнопок створені класи з модифікаторами та винесені в окремі файли.
+SASS preprocessor in SCSS syntax and BEM methodology were used to create structured and maintainable CSS and HTML code. CSS variables for site colors and main font, as well as mixins for commonly used style sets (breakpoints, flex, box shadow, etc.) were created. Classes with modifiers for styling headings, texts, form elements, and buttons were separated into individual files.
 
-## Flexbox та CSS Grid
-Використовувалися обидві технології для створення `гнучкого та легко адаптивного сайту`. Для досягнення найкращої адаптації під усі пристрої використовувалися медіа-запити у комбінації із responsive units.
+## Flexbox and CSS Grid
+Both technologies were used to create a flexible and easily adaptable website. Media queries in combination with responsive units were used for optimal adaptation to all devices.
+
 
 ## JavaScript
-`Весь функціонал` сайту: мобільне двохрівневе меню, модальне вікно з формою, таби із фільтрацією по категоріям, кнопка "Показати ще", акордеон, плавний скролл сторінки кнопкою "Наверх" — `написаний на нативному JS`. Слайдери реалізовані за допомогою бібліотеки Swiper Slider.
+All site functionality, including mobile menu, modal window, tabs, "Load more" button, accordion, smooth scroll — was implemented in native JS. Sliders were implemented using the Swiper Slider library.
 
-## Gulp та Webpack
-Для автоматизації завдань розробки, таких як `компіляція SCSS у CSS`, використання `svg-спрайтів`, `збірка та оптимізація файлів JavaScript`, `оптимізація зображень` та інші, я використовувала Gulp + Webpack.
+## Gulp and Webpack
+Gulp + Webpack build tools were used to automate development tasks such as compiling SCSS to CSS, using SVG sprites, bundling and optimizing JavaScript files, optimizing images, and more.
 
-## Валідація HTML-сторінок
-Усі HTML-сторінки `пройшли перевірку валідатором` https://validator.w3.org/ на відповідність стандартам валідної верстки.
+## HTML Pages Validation
+All HTML pages passed validation with https://validator.w3.org/ for compliance with valid markup standards.
+
