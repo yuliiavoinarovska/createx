@@ -1,42 +1,52 @@
 // базові підключення
-@import "vars";
-@import "mixins";
-@import "fonts";
-@import "settings";
-@import "./components/heading";
-@import "./components/breadcrumbs";
-@import "./components/btn";
-@import "./components/form-field";
+@use "vars" as vars;
+@use "settings" as settings;
+
+// MAXINS
+@use "mixins/breakpoint" as *;
+@use "mixins/checkbox" as *;
+@use "mixins/font-face" as *;
+@use "mixins/flex" as *;
+@use "mixins/disable-mob-hover" as *;
+@use "mixins/shadows" as *;
+@use "fonts" as *;
+
+
+
+@use "components/heading" as *;
+@use "components/breadcrumbs" as *;
+@use "components/btn" as *;
+@use "components/form-field" as *;
 
 //  компоненти сторінки
-@import "./components/slider-nav";
+@use "components/slider-nav" as *;
 // підключення компонентів сторінки (великі компоненти)
-@import "./components/header";
-@import "./components/hero";
-@import "./components/about-section";
-@import "./components/mission";
-@import "./components/services-section";
-@import "./components/portfolio-section";
-@import "./components/partners";
-@import "./components/testimonials";
-@import "./components/recent-news";
-@import "./components/contacts-section";
-@import "./components/footer";
-@import "./components/page-hero";
-@import "./components/services-content";
-@import "./components/offer";
-@import "./components/stages";
-@import "./components/benefits";
-@import "./components/projects";
-@import "./components/pricing";
-@import "./components/portfolio-item";
-@import "./components/portfolio";
-@import "./components/project-goal";
-@import "./components/decisions";
+@use "components/header" as *;
+@use "components/hero" as *;
+@use "components/about-section" as *;
+@use "components/mission" as *;
+@use "components/services-section" as *;
+@use "components/portfolio-section" as *;
+@use "components/partners" as *;
+@use "components/testimonials" as *;
+@use "components/recent-news" as *;
+@use "components/contacts-section" as *;
+@use "components/footer" as *;
+@use "components/page-hero" as *;
+@use "components/services-content" as *;
+@use "components/offer" as *;
+@use "components/stages" as *;
+@use "components/benefits" as *;
+@use "components/projects" as *;
+@use "components/pricing" as *;
+@use "components/portfolio-item" as *;
+@use "components/portfolio" as *;
+@use "components/project-goal" as *;
+@use "components/decisions" as *;
 
 // підключення компонентів сторінки (малі компоненти)
-@import "./components/modal";
-@import "./components/learn-more";
-@import "./components/work-slider";
+@use "components/modal" as *;
+@use "components/learn-more" as *;
+@use "components/work-slider" as *;
 
 

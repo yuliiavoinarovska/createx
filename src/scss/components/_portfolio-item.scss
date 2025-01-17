@@ -1,3 +1,11 @@
+@use "mixins/breakpoint" as *;
+@use "mixins/checkbox" as *;
+@use "mixins/font-face" as *;
+@use "mixins/flex" as *;
+@use "mixins/disable-mob-hover" as *;
+@use "mixins/shadows" as *;
+@use "fonts" as *;
+
 .portfolio-item {
 	width: 100%;
 	height: 100%;
@@ -43,7 +51,7 @@
 		}
 
 		.portfolio-item__image {
-			height: 277px;
+			height: 275px;
 		}
 	}
 }

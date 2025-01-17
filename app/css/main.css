@@ -14,51 +14,6 @@
   --hover: #FC3300;
 }
 
-/* stylelint-disable */
-/* stylelint-disable */
-.custom-checkbox__input:checked + .custom-checkbox__text::after {
-  opacity: 1;
-}
-
-.custom-checkbox__input:focus + .custom-checkbox__text::before {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-.custom-checkbox__input:disabled + .custom-checkbox__text {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-/* stylelint-disable */
-@font-face {
-  font-family: "GothamPro";
-  src: url("../fonts/../fonts/GothamPro.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GothamPro";
-  src: url("../fonts/../fonts/GothamProBold.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/../fonts/LatoRegular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/../fonts/LatoBlack.woff2") format("woff2");
-  font-weight: 900;
-  font-display: swap;
-  font-style: normal;
-}
 html {
   box-sizing: border-box;
 }
@@ -157,6 +112,51 @@ a {
   position: relative;
 }
 
+/* stylelint-disable */
+/* stylelint-disable */
+.custom-checkbox__input:checked + .custom-checkbox__text::after {
+  opacity: 1;
+}
+
+.custom-checkbox__input:focus + .custom-checkbox__text::before {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.custom-checkbox__input:disabled + .custom-checkbox__text {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* stylelint-disable */
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/../fonts/GothamPro.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/../fonts/GothamProBold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/../fonts/LatoRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/../fonts/LatoBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
 .hero-title {
   margin: 0;
   margin-bottom: 24px;
@@ -2819,7 +2819,7 @@ a {
   margin-bottom: 0;
 }
 .portfolio-item:hover .portfolio-item__image {
-  height: 277px;
+  height: 275px;
 }
 
 @media (max-width: 992px) {

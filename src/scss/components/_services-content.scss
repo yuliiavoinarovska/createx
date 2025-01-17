@@ -1,3 +1,11 @@
+@use "mixins/breakpoint" as *;
+@use "mixins/checkbox" as *;
+@use "mixins/font-face" as *;
+@use "mixins/flex" as *;
+@use "mixins/disable-mob-hover" as *;
+@use "mixins/shadows" as *;
+@use "fonts" as *;
+
 .services {
 	position: relative;
 	padding: 120px 0 180px 0;

@@ -1,3 +1,10 @@
+@use "mixins/breakpoint" as *;
+@use "mixins/checkbox" as *;
+@use "mixins/font-face" as *;
+@use "mixins/flex" as *;
+@use "mixins/disable-mob-hover" as *;
+@use "mixins/shadows" as *;
+@use "fonts" as *;
 .partners {
 	margin: 0 auto;
 	padding-top: 80px;
